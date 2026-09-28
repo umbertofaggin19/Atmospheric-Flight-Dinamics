@@ -207,7 +207,7 @@ for i = 1:length(time)
         y_setpoint = 0;
     end
 
-    errore6 = y_setpoint - y_ned; %RICONTROLLARE QUESTA RIGA
+    errore6 = y_setpoint - y_ned; 
     errore6_eff(i) = errore6;
 
     kP6 = 0.001;
@@ -298,9 +298,7 @@ for i = 1:length(time)
 
     %1 equazione Newton (TRASLAZIONE BARICENTRO)
    
-    %simulo vento che
-    %spinge indietro, di conseguenza è richiesta più spinta (5 N in più, in
-    %effetti...)
+    %simulo vento x verificare corretto funzionamento dei meccanismi PID
     Vx = -10;
     Vy = 0;
     Vz = 3;
